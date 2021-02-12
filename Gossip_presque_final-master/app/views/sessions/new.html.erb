@@ -1,0 +1,16 @@
+<header>
+	<div class="contact"><%= link_to "home", '/' %></div>
+	<div class="contact"><%= link_to "team", '/team' %></div>
+  <div class="container">
+		<h1 class="display-6">Connectiiiiion</h1>
+	</div>
+</div>
+</header>
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+    <%= label_tag "Email" %>
+    <%= text_field_tag :email, nil, placeholder: "Email" %>
+		<br />
+    <%= label_tag "Mdp" %>
+    <%= password_field_tag :password, nil, placeholder: "Password" %>
+    <%= submit_tag "Log In"%>
+<% end %>
